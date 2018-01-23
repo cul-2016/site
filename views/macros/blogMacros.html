@@ -1,0 +1,34 @@
+{%- macro renderBlogListings(pieces, options) -%}
+  {%- if pieces -%}
+    <ul class="">
+      {%- for piece in pieces -%}
+        {{ renderBlogListing(piece) }}
+      {%- endfor -%}
+    </ul>
+  {%- else -%}
+    <h2>{{ __('There are no blog posts yet.') }}</h2>
+  {%- endif -%}
+{%- endmacro -%}
+
+{%- macro renderBlogListing(piece) -%}
+{% set image = apos.images.first(piece) or null %}
+  <li class="">
+    <div class="">
+      <div class="" {% if image %}style="background-image:url({{ apos.attachments.url(image) }})"{% endif %}>
+        {%- if image -%}
+          <img src="{{ apos.attachments.url(image) }}">
+        {%- endif -%}
+      </div>
+      <span class="">{{ piece.publishedAt | date('MMM DD, YYYY' ) }}</span>
+    </div>{#
+      #}<div class="">
+      <h5 class=""><a href="{{ piece._url }}">{{ piece.title | e }}</a></h5>
+      {% if piece.authorId %}
+        <h6 class="">by {{ piece._author.title }}</h6>
+      {% endif %}
+      <div class="">{{ apos.quodl.areaToPlainText(piece, 'main') | truncate(200) }}</div>
+      {# <div class="">{{ apos.singleton(piece, 'main', 'apostrophe-rich-text', { edit: false, truncate: 50 } ) }}</div> #}
+      <a href="{{ piece._url }}" alt="Read More">Read More</a>
+    </div>
+  </li>
+{%- endmacro -%}
