@@ -26,6 +26,7 @@
     We recommend you use the beforeMain block for global page components
     like headers or navigation.
   #}
+  <a href="{{ data.home._url }}">Quodl</a>
   <ul class="">
     {% for nav_item in data.home._children %}
       <li><a href="{{ nav_item._url }}">{{ nav_item.title }}</a></li>
