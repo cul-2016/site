@@ -1,10 +1,9 @@
 {% extends 'apostrophe-templates:layout.html' %}
 
-<!-- {% block bodyClass %}{{ super() }} demo-blog-show-page{% endblock %} -->
-
 {# Article specific title tag, for Facebook, SEO, etc. #}
 {%- block title -%}
   {{ data.page.title | e }} &ndash; {{ data.piece.title | e }}
+
 {%- endblock -%}
 
 {% block main %}

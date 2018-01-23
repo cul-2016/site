@@ -9,6 +9,10 @@ var apos = require('apostrophe')({
     'apostrophe-blog-pages': {},
     'apostrophe-blog-widgets': {},
     'as-helpers': {},
-    'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') }
-  }
+    'link-widgets': {},
+    'page-link-widgets': {},
+    'apostrophe-templates': {
+      viewsFolderFallback: path.join(__dirname, 'views'),
+    },
+  },
 });

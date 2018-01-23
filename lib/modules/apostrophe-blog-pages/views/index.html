@@ -15,6 +15,15 @@
   {{ apos.singleton(data.page, 'pageSubheader', 'apostrophe-rich-text') }}
 </h2>
 
+{{
+  apos.area(data.page, 'navigation', {
+    widgets: {
+      link: {},
+      'page-link': {}
+    }
+  })
+}}
+
 <div class="">
   <div class="">
     {# {% if data.page._edit %}
