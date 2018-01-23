@@ -14,11 +14,6 @@
 {% set image = apos.images.first(piece) or null %}
   <li class="">
     <div class="">
-      <div class="" {% if image %}style="background-image:url({{ apos.attachments.url(image) }})"{% endif %}>
-        {%- if image -%}
-          <img src="{{ apos.attachments.url(image) }}">
-        {%- endif -%}
-      </div>
       <span class="">{{ piece.publishedAt | date('MMM DD, YYYY' ) }}</span>
     </div>{#
       #}<div class="">

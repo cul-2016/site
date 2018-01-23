@@ -1,0 +1,49 @@
+{% extends 'apostrophe-templates:layout.html' %}
+
+<!-- {% block bodyClass %}{{ super() }} demo-blog-show-page{% endblock %} -->
+
+{# Article specific title tag, for Facebook, SEO, etc. #}
+{%- block title -%}
+  {{ data.page.title | e }} &ndash; {{ data.piece.title | e }}
+{%- endblock -%}
+
+{% block main %}
+  <div class="tc">
+    <div class="">
+      <div class="">
+        <h3>{{ data.piece.title }}</h3>
+        <div class="">{{ data.piece.publishedAt | date('MMM Do, YYYY') }}</div>
+      </div>
+      <div class="w3 center">
+        {% if data.piece._author.thumbnail.items.length %}
+          {{ apos.singleton(data.piece._author, 'thumbnail', 'apostrophe-images', {edit: false}) }}
+        {% endif %}
+      </div>
+      {% if data.piece._author %}
+        <h5>by {{ data.piece._author.title }}</h5>
+      {% endif %}
+      <div class="">
+
+        {{ apos.area(data.piece, 'main', {
+          widgets: {
+            'apostrophe-rich-text': {
+               toolbar: [ 'Styles', 'Bold', 'Italic', 'Blockquote', 'Link', 'Anchor', 'Unlink', 'BulletedList' ],
+               styles: [
+                 { name: 'Title', element: 'h3' },
+                 { value: 'h5', label: 'Subtitle' },
+                 { name: 'Paragraph', element: 'p' }
+               ]
+             },
+            'apostrophe-images': {
+              minSize: [ 700, 350 ],
+              aspectRatio: [ 2, 1 ],
+              size: 'full'
+            },
+            'apostrophe-video': {}
+          }
+        }) }}
+
+      </div>
+    </div>
+  </div>
+{% endblock %}
