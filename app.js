@@ -8,6 +8,7 @@ var apos = require('apostrophe')({
     'apostrophe-blog': {},
     'apostrophe-blog-pages': {},
     'apostrophe-blog-widgets': {},
+    'apostrophe-images-widgets': {},
     'as-helpers': {},
     'link-widgets': {},
     'page-link-widgets': {},
