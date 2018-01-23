@@ -1,6 +1,6 @@
 locales
 npm-debug.log
-data
+data/temp
 public/uploads
 public/apos-minified
 temp/uploadfs
