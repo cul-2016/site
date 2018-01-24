@@ -1,0 +1,50 @@
+{%- macro renderBlogListings(pieces, options) -%}
+  {%- if pieces -%}
+    <ul class="">
+      {%- for piece in pieces -%}
+        {{ renderBlogListing(piece) }}
+      {%- endfor -%}
+    </ul>
+  {%- else -%}
+    <h2>{{ __('There are no blog posts yet.') }}</h2>
+  {%- endif -%}
+{%- endmacro -%}
+
+{%- macro renderBlogListing(piece) -%}
+{% set image = apos.images.first(piece) or null %}
+  <li class="">
+    <div class="">
+      <span class="">{{ piece.publishedAt | date('MMM DD, YYYY' ) }}</span>
+    </div>{#
+      #}<div class="">
+      <h5 class=""><a href="{{ piece._url }}">{{ piece.title | e }}</a></h5>
+      {% if piece.authorId %}
+        <h6 class="">by {{ piece._author.title }}</h6>
+      {% endif %}
+      <div class="">{{ apos.quodl.areaToPlainText(piece, 'main') | truncate(200) }}</div>
+      {# <div class="">{{ apos.singleton(piece, 'main', 'apostrophe-rich-text', { edit: false, truncate: 50 } ) }}</div> #}
+      <a href="{{ piece._url }}" alt="Read More">Read More</a>
+    </div>
+  </li>
+{%- endmacro -%}
+
+{%- macro blogCard(piece) -%}
+  <div class="">
+    <div class="">
+      <div class="">
+        {{ apos.singleton(piece, 'slideshow', 'apostrophe-images', { limit: 1, aspectRatio: [324, 162], noHeight: true, edit: false, size: 'one-third' }) }}
+        <div class="">
+          <a href="{{ piece._url }}"><h6 class="">{{ piece.title }}</h6></a>
+          {% if piece.authorId %}
+            <span class="">by {{ piece._author.title }}</span>
+          {% endif %}
+        </div>
+      </div>
+      <div class="">
+        <p class="">{{ apos.quodl.areaToPlainText(piece, 'main', { truncate: 300 }) }}</p>
+        <a href="{{ piece._url }}">Read More</a>
+      </div>
+    </div>
+    <span class="">{{ piece.publishedAt | date('MMM Do, YYYY') }}</span>
+  </div>
+{%- endmacro -%}

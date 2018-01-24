@@ -1,0 +1,45 @@
+{% extends 'apostrophe-templates:layout.html' %}
+{% import 'macros/blogMacros.html' as blog %}
+{% block bodyClass %} demo-blog-index-page{% endblock %}
+{% block headerMessage %}You are on the "Blog Index" template of the Apostrophe demo site.{% endblock %}
+{% block upperClass %}bg-gold{% endblock %}
+{% block title %}Quodl | {{ data.page.title | e }}{% endblock %}
+
+{% import 'apostrophe-pager:macros.html' as pager %}
+
+{% block main %}
+<h1 class="tc">
+  {{ apos.singleton(data.page, 'pageHeader', 'apostrophe-rich-text') }}
+</h1>
+<h2 class="tc">
+  {{ apos.singleton(data.page, 'pageSubheader', 'apostrophe-rich-text') }}
+</h2>
+
+{{
+  apos.area(data.page, 'navigation', {
+    widgets: {
+      link: {},
+      'page-link': {}
+    }
+  })
+}}
+
+<a href="/news">All Articles</a>
+<a href="/news/lecturers">For Lecturers</a>
+<a href="/news/students">For Students</a>
+
+<div class="">
+  <div class="">
+    {# {% if data.page._edit %}
+      <div data-new-blog-post>
+        <div class="">
+          <a class="" href="#"><i class="icon-plus"></i> New Blog Post</a>
+        </div>
+      </div>
+    {% endif %} #}
+     {{ blog.renderBlogListings(data.pieces) }}
+     <div class="">{{ pager.render({ page: data.currentPage, total: data.totalPages }, '#') }}</div>
+  </div>
+</div>
+
+{% endblock %}
