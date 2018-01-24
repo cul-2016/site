@@ -26,10 +26,19 @@
     We recommend you use the beforeMain block for global page components
     like headers or navigation.
   #}
-  <a href="{{ data.home._url }}">Quodl</a>
-  <ul class="">
+  <div class="center tc pl5 pt5">
+    <a href="{{ data.home._url }}" class="fl">
+      <img src="../images/quodl-logo.png" alt="Quodl logo" class="w3">
+    </a>
+  </div>
+  <a href="{{ data.home._url }}" class="no-underline pt3 pl2 fl black">Quodl</a>
+  <ul class="list dib fr">
     {% for nav_item in data.home._children %}
-      <li><a href="{{ nav_item._url }}">{{ nav_item.title }}</a></li>
+      <li class="dib ph2">
+        <a href="{{ nav_item._url }}" class="no-underline black">
+          {{ nav_item.title }}
+        </a>
+      </li>
     {% endfor %}
   </ul>
 {% endblock %}
