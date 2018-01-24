@@ -1,10 +1,29 @@
-{#
-  This is an example home page template. It inherits and extends a layout template
-  that lives in the top-level views/ folder for convenience
-#}
-
 {% extends "layout.html" %}
 
 {% block main %}
-  
+  <h1 class="f1 pl5">
+    {{ apos.singleton(data.page, 'pageHeader', 'apostrophe-rich-text') }}
+  </h1>
+
+  <h3 class="pl5 fw1">
+    {{ apos.singleton(data.page, 'pageSubheader', 'apostrophe-rich-text') }}
+  </h3>
+
+  <section class="tc">
+    <h2>
+      {{ apos.singleton(data.page, 'sectionHeader', 'apostrophe-rich-text') }}
+    </h2>
+    <h3>
+      {{ apos.singleton(data.page, 'sectionSubheader', 'apostrophe-rich-text') }}
+    </h3>
+    <p class="tl">
+      {{ apos.area(data.page, 'body', {
+      widgets: {
+        'apostrophe-rich-text': {
+          toolbar: [ 'Bold', 'Italic' ]
+        }
+      }
+    }) }}
+    </p>
+  </section>
 {% endblock %}
