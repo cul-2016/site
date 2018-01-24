@@ -1,29 +1,46 @@
 {% extends "layout.html" %}
 
 {% block main %}
-  <h1 class="f1 pl5">
-    {{ apos.singleton(data.page, 'pageHeader', 'apostrophe-rich-text') }}
-  </h1>
+  <section class="bg-silver pv5 pl5">
+    <h1 class="f1">
+      {{ apos.singleton(data.page, 'pageHeader', 'apostrophe-rich-text') }}
+    </h1>
 
-  <h3 class="pl5 fw1">
-    {{ apos.singleton(data.page, 'pageSubheader', 'apostrophe-rich-text') }}
-  </h3>
+    <h3 class="fw1 dib pr5">
+      {{ apos.singleton(data.page, 'pageSubheader', 'apostrophe-rich-text') }}
+    </h3>
 
-  <section class="tc">
-    <h2>
+    <div class="dib br-pill bg-blue ba center tc ph3 v-top">
+      <a href="/about" class="no-underline">
+        {{ apos.singleton(data.page, 'sectionButton', 'apostrophe-rich-text') }}
+      </a>
+    </div>
+  </section>
+
+  <section class="w-75 center">
+    <h2 class="tc">
       {{ apos.singleton(data.page, 'sectionHeader', 'apostrophe-rich-text') }}
     </h2>
-    <h3>
+    <h3 class="tc pb3">
       {{ apos.singleton(data.page, 'sectionSubheader', 'apostrophe-rich-text') }}
     </h3>
-    <p class="tl">
-      {{ apos.area(data.page, 'body', {
-      widgets: {
-        'apostrophe-rich-text': {
-          toolbar: [ 'Bold', 'Italic' ]
-        }
-      }
-    }) }}
-    </p>
+    <div class="w-40 ph3 dib">
+      <p>
+        {{ apos.area(data.page, 'body', {
+          widgets: {
+            'apostrophe-rich-text': {
+              toolbar: [ 'Bold', 'Italic' ]
+            }
+          }
+        }) }}
+      </p>
+    </div>
+    <div class="w-50 dib v-top">
+      <div class="br-pill w-40 bg-light-red ba center tc mt3">
+        <a href="/about" class="no-underline">
+          {{ apos.singleton(data.page, 'sectionButton', 'apostrophe-rich-text') }}
+        </a>
+      </div>
+    </div>
   </section>
 {% endblock %}
