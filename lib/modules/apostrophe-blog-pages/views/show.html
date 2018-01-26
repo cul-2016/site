@@ -7,13 +7,11 @@
 {%- endblock -%}
 
 {% block main %}
-  <div class="tc">
-    <div class="">
-      <div class="">
-        <h3>{{ data.piece.title }}</h3>
-        <div class="">{{ data.piece.publishedAt | date('MMM Do, YYYY') }}</div>
-      </div>
-      <div class="">
+  <div class="tc w-40 center">
+    <div>
+      <h3 class="f2">{{ data.piece.title }}</h3>
+      <div>{{ data.piece.publishedAt | date('MMM Do, YYYY') }}</div>
+      <div class="lh-copy">
         {{ apos.area(data.piece, 'main', {
           widgets: {
             'apostrophe-rich-text': {
@@ -34,20 +32,24 @@
         }) }}
       </div>
 
-      <div class="w3 center">
+      {% if data.piece._author %}
+      <h5 class="tl fw1 bb">Author</h5>
+      <div class="w-20 dib v-top pr3">
         {% if data.piece._author.thumbnail.items.length %}
         {{ apos.singleton(data.piece._author, 'thumbnail', 'apostrophe-images', {edit: false}) }}
         {% endif %}
       </div>
-      {% if data.piece._author %}
-      <h5>by {{ data.piece._author.title }}</h5>
-      {% endif %}
-      {% if data.piece._author.bio %}
-      <p> {{ data.piece._author.bio }} </p>
-      {% endif %}
+      <div class="dib w-70">
+        <h5 class="b f5 tl mt1">{{ data.piece._author.title }}</h5>
+        {% endif %}
+        {% if data.piece._author.bio %}
+        <p class="tl"> {{ data.piece._author.bio }} </p>
+        {% endif %}
+      </div>
     </div>
 
-    <div class="">
+    <div class="center">
+      <h5 class="orange f5">YOU MIGHT ALSO LIKE</h5>
        {{ apos.singleton(data.page, 'blogWidget', 'apostrophe-blog' ) }}
     </div>
   </div>
