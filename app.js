@@ -20,7 +20,7 @@ var apos = require('apostrophe')({
         backend: 's3',
         secret: process.env.AWS_SECRET,
         key: process.env.AWS_ID,
-        bucket: 'quodl-test',
+        bucket: process.env.AWS_BUCKET,
         region: 'eu-west-1',
       },
     },
