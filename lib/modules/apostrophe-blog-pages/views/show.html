@@ -32,6 +32,20 @@
         }) }}
       </div>
 
+      <h5>Share this post</h5>
+
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://quodl-site.herokuapp.com{{data.page.slug + '/' + data.piece.slug}}" target="_blank">
+        Facebook
+      </a>
+
+      <a href="https://www.linkedin.com/cws/share?url=https://quodl-site.herokuapp.com{{data.page.slug + '/' + data.piece.slug}}" target="_blank">
+        Linkedin
+      </a>
+
+      <a href="http://twitter.com/share?text={{ data.piece.title }}&url=https://quodl-site.herokuapp.com{{data.page.slug + '/' + data.piece.slug}}&hashtags=quodl" target="_blank">
+        Twitter
+      </a>
+
       {% if data.piece._author %}
       <h5 class="tl fw1 bb">Author</h5>
       <div class="w-20 dib v-top pr3">
