@@ -15,5 +15,14 @@ var apos = require('apostrophe')({
     'apostrophe-templates': {
       viewsFolderFallback: path.join(__dirname, 'views'),
     },
+    'apostrophe-attachments': {
+      uploadfs: {
+        backend: 's3',
+        secret: process.env.AWS_SECRET,
+        key: process.env.AWS_ID,
+        bucket: 'quodl-test',
+        region: 'eu-west-1',
+      },
+    },
   },
 });
