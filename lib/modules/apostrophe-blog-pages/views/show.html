@@ -7,13 +7,11 @@
 {%- endblock -%}
 
 {% block main %}
-  <div class="tc">
-    <div class="">
-      <div class="">
-        <h3>{{ data.piece.title }}</h3>
-        <div class="">{{ data.piece.publishedAt | date('MMM Do, YYYY') }}</div>
-      </div>
-      <div class="">
+  <div class="tc w-40 center">
+    <div>
+      <h3 class="f2">{{ data.piece.title }}</h3>
+      <div>{{ data.piece.publishedAt | date('MMM Do, YYYY') }}</div>
+      <div class="lh-copy">
         {{ apos.area(data.piece, 'main', {
           widgets: {
             'apostrophe-rich-text': {
@@ -34,20 +32,38 @@
         }) }}
       </div>
 
-      <div class="w3 center">
+      <h5>Share this post</h5>
+
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://quodl-site.herokuapp.com{{data.page.slug + '/' + data.piece.slug}}" target="_blank">
+        Facebook
+      </a>
+
+      <a href="https://www.linkedin.com/cws/share?url=https://quodl-site.herokuapp.com{{data.page.slug + '/' + data.piece.slug}}" target="_blank">
+        Linkedin
+      </a>
+
+      <a href="http://twitter.com/share?text={{ data.piece.title }}&url=https://quodl-site.herokuapp.com{{data.page.slug + '/' + data.piece.slug}}&hashtags=quodl" target="_blank">
+        Twitter
+      </a>
+
+      {% if data.piece._author %}
+      <h5 class="tl fw1 bb">Author</h5>
+      <div class="w-20 dib v-top pr3">
         {% if data.piece._author.thumbnail.items.length %}
         {{ apos.singleton(data.piece._author, 'thumbnail', 'apostrophe-images', {edit: false}) }}
         {% endif %}
       </div>
-      {% if data.piece._author %}
-      <h5>by {{ data.piece._author.title }}</h5>
-      {% endif %}
-      {% if data.piece._author.bio %}
-      <p> {{ data.piece._author.bio }} </p>
-      {% endif %}
+      <div class="dib w-70">
+        <h5 class="b f5 tl mt1">{{ data.piece._author.title }}</h5>
+        {% endif %}
+        {% if data.piece._author.bio %}
+        <p class="tl"> {{ data.piece._author.bio }} </p>
+        {% endif %}
+      </div>
     </div>
 
-    <div class="">
+    <div class="center">
+      <h5 class="orange f5">YOU MIGHT ALSO LIKE</h5>
        {{ apos.singleton(data.page, 'blogWidget', 'apostrophe-blog' ) }}
     </div>
   </div>

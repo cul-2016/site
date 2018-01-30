@@ -28,6 +28,14 @@ var apos = require('apostrophe')({
       // of the "published" field, for instance
       fields: [ 'title', 'email', 'subject', 'details']
     },
-    }
+    'apostrophe-attachments': {
+      uploadfs: {
+        backend: 's3',
+        secret: process.env.AWS_SECRET,
+        key: process.env.AWS_ID,
+        bucket: process.env.AWS_BUCKET,
+        region: 'eu-west-1',
+      },
+    },
   },
-);
+});
