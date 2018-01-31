@@ -13,10 +13,6 @@
 {% endblock %}
 
 {% block extraHead %}
-  {#
-    This block outputs its contents in the HTML document's <head>.
-    It is a good place to put extra <script> <link> and <meta> tags.
-  #}
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
 {% endblock %}
@@ -25,22 +21,25 @@
   {#
     We recommend you use the beforeMain block for global page components
     like headers or navigation.
-  #}
-  <div class="center tc pl5 pt5">
-    <a href="{{ data.home._url }}" class="fl">
-      <img src="../images/quodl-logo.png" alt="Quodl logo" class="w3">
-    </a>
-  </div>
-  <a href="{{ data.home._url }}" class="no-underline pt3 pl2 fl black">Quodl</a>
-  <ul class="list dib fr">
-    {% for nav_item in data.home._children %}
-      <li class="dib ph2">
-        <a href="{{ nav_item._url }}" class="no-underline black">
-          {{ nav_item.title }}
+  #}<div class="absolute w-100">
+    <nav class="w-site center w-80">
+      <div class="center tc pt3">
+        <a href="{{ data.home._url }}" class="fl">
+          <img src="../images/logo_na_dark.svg" alt="Quodl logo" class="w3-5">
         </a>
-      </li>
-    {% endfor %}
-  </ul>
+      </div>
+      <a href="{{ data.home._url }}" class="no-underline pt3 pl3 fw6 fl black">Quodl</a>
+      <ul class="list dib fr">
+        {% for nav_item in data.home._children %}
+          <li class="dib pl4 fw6">
+            <a href="{{ nav_item._url }}" class="no-underline black">
+              {{ nav_item.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
 {% endblock %}
 
 {% block main %}
