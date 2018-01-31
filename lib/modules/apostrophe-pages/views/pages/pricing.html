@@ -1,7 +1,44 @@
 {% extends "layout.html" %}
 
 {% block main %}
+  <section class="bg-silver pt6 pb5 pt5-ns pl5-ns tc">
+    <h1 class="quodl-blue f2 f1-ns w-80 w-100-ns center">
+      {{ apos.singleton(data.page, 'pageHeader', 'apostrophe-rich-text') }}
+    </h1>
+    <h3 class="f4 f3-ns black fw1 w-80 w-100-ns center">
+      {{ apos.singleton(data.page, 'pageSubHeader', 'apostrophe-rich-text') }}
+    </h3>
+  </section>
 
-  <h2>Pricing</h2>
+  <section class="quodl-bg-blue pv5 tc">
+    <div class="bg-white br3 w-80 w-25-ns pa3 pb4 shadow-2 center">
+      <div class="f3 mt0">
+        {{ apos.singleton(data.page, 'priceBoxHeader', 'apostrophe-rich-text') }}
+      </div>
+      <div class="fw1 pb2">
+        {{ apos.singleton(data.page, 'priceBoxText', 'apostrophe-rich-text') }}
+      </div>
+      <a href="#contact" class="white quodl-bg-blue no-underline f5 br-pill pv2 ph3">Contact us</a>
+    </div>
+  </section>
 
+  <section class="bg-silver-ns pv4 pv5-ns">
+    <div class="bg-white br3 w-80 pv3 shadow-2-ns center tl ph0 ph5-ns">
+      <h4 class="tc f3">
+        {{ apos.singleton(data.page, 'faqsHeader', 'apostrophe-rich-text') }}
+      </h4>
+      <p>
+        {{ apos.singleton(data.page, 'faqsText', 'apostrophe-rich-text', {
+          toolbar: ['Bold']
+        }) }}
+      </p>
+    </div>
+  </section>
+  <section class="pv5 quodl-bg-light-gray">
+    <div class="bg-white br3 w-80 pa3 shadow-2 center tl ph5">
+      <h4 class="tc f4 f3-ns fw1"><a name="contact"></a>
+        {{ apos.singleton(data.page, 'contactHeader', 'apostrophe-rich-text') }}
+      </h4>
+    </div>
+  </section>
 {% endblock %}
