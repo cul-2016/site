@@ -17,6 +17,8 @@
     "apostrophe-blog": "^2.1.1",
     "apostrophe-events": "^2.1.0",
     "apostrophe-pieces-submit-widgets": "^2.0.2",
-    "html2plaintext": "^2.0.1"
+    "async": "^2.6.0",
+    "html2plaintext": "^2.0.1",
+    "lodash": "^4.17.4"
   }
 }
