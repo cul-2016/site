@@ -1,5 +1,58 @@
 {% extends "layout.html" %}
 
 {% block main %}
+<section class="bg-silver pv5 center tc">
+  <h3 class="f2 quodl-blue">
+    {{ apos.singleton(data.page, 'pageHeader', 'apostrophe-rich-text') }}
+  </h3>
+  <div class="w-80 w-40-ns center">
+    <p>
+      {{ apos.singleton(data.page, 'pageSubheader', 'apostrophe-rich-text') }}
+    </p>
+  </div>
 
+  <div class="bg-white mt5 tl br3 shadow-2 w-90 w-80-ns pv3 ph4 ph5-ns center lh-copy">
+    <h3 class="f3">
+      {{ apos.singleton(data.page, 'aboutTextHeader', 'apostrophe-rich-text') }}
+    </h3>
+    {{ apos.area(data.page, 'body', {
+      widgets: {
+        'apostrophe-rich-text': {
+          toolbar: [ 'Bold', 'Italic' ]
+        },
+        'apostrophe-images': {
+          limit: 1,
+          size: 'full'
+        }
+      }
+    }) }}
+    <div class="w-80 w-70-ns center">
+      {{ apos.area(data.page, 'bodyImage', {
+        widgets: {
+          'apostrophe-rich-text': {
+            toolbar: [ 'Bold', 'Italic' ]
+          },
+          'apostrophe-images': {
+            limit: 1,
+            size: 'full'
+          }
+        }
+      }) }}
+    </div>
+    {{ apos.area(data.page, 'bodyEnd', {
+      widgets: {
+        'apostrophe-rich-text': {
+          toolbar: [ 'Bold', 'Italic' ]
+        },
+        'apostrophe-images': {
+          limit: 1,
+          size: 'full'
+        }
+      }
+    }) }}
+    <h3 class="f3 quodl-blue tc">
+      {{ apos.singleton(data.page, 'aboutButtonHeader', 'apostrophe-rich-text') }}
+    </h3>
+  </div>
+</section>
 {% endblock %}
