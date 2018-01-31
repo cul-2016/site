@@ -1,25 +1,46 @@
 {% extends "layout.html" %}
 
 {% block main %}
-  <section class="bg-silver pv5 pl5">
-    <h1 class="f1">
-      {{ apos.singleton(data.page, 'pageHeader', 'apostrophe-rich-text') }}
+  <section class="pv6 bg-filler">
+    <h1 class="f1 tc quodl-blue w-site w-80 center">
+      {{ apos.singleton(data.page, 'pageHeader', 'apostrophe-rich-text', {}) }}
     </h1>
 
-    <h3 class="fw1 dib pr5">
-      {{ apos.singleton(data.page, 'pageSubheader', 'apostrophe-rich-text') }}
+    <h3 class="fw1 f4 tc mw6-5 center lh-copy">
+      {{ apos.singleton(data.page, 'pageSubTitle', 'apostrophe-rich-text', {}) }}
     </h3>
 
-    <div class="dib br-pill bg-blue ba center tc ph3 v-top">
-      <a href="/about" class="no-underline">
-        {{ apos.singleton(data.page, 'sectionButton', 'apostrophe-rich-text') }}
+    <div class="tc">
+      <a href="/pricing" class="no-underline white">
+        <div class="dib br-pill tc w5 pv3 v-top quodl-bg-blue ba-quodl-blue white mr3 mb3">
+          {{ apos.singleton(data.page, 'accountButton', 'apostrophe-rich-text', {}) }}
+        </div>
+      </a>
+
+      <a href="/about" class="no-underline quodl-blue">
+        <div class="dib br-pill tc w5 pv3 v-top ba-quodl-blue quodl-blue">
+          {{ apos.singleton(data.page, 'tourButton', 'apostrophe-rich-text', {}) }}
+        </div>
       </a>
     </div>
   </section>
 
-  <section class="w-75 center">
-    <h2 class="tc">
-      {{ apos.singleton(data.page, 'sectionHeader', 'apostrophe-rich-text') }}
+  <section class="quodl-bg-blue pv5">
+    <div class="w-site w-80 center">
+      <h2 class="f2 white">
+        {{ apos.singleton(data.page, 'pageTitle2', 'apostrophe-rich-text', {}) }}
+      </h2>
+      <h3 class="f3 white fw1 mb4">
+        {{ apos.singleton(data.page, 'pageSubTitle2', 'apostrophe-rich-text', {}) }}
+      </h3>
+
+      <a href="/about" class="no-underline white">
+        <div class="dib br-pill tc w5 pv3 v-top bg-bright-orange mr3 mb3 fw6 white">
+          {{ apos.singleton(data.page, 'learnMoreButton', 'apostrophe-rich-text', {}) }}
+        </div>
+      </a>
+    </div>
+  </section>
     </h2>
     <h3 class="tc pb3">
       {{ apos.singleton(data.page, 'sectionSubheader', 'apostrophe-rich-text') }}
