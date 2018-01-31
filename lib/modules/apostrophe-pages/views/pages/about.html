@@ -2,16 +2,14 @@
 
 {% block main %}
 <section class="bg-silver pv5 center tc">
-  <h3 class="f2 quodl-blue">
+  <h3 class="f2 f1-ns w-80 w-100-ns quodl-blue center">
     {{ apos.singleton(data.page, 'pageHeader', 'apostrophe-rich-text') }}
   </h3>
-  <div class="w-80 w-40-ns center">
-    <p>
+  <div class="w-80 w-60-ns center lh-copy f4 f3-ns">
       {{ apos.singleton(data.page, 'pageSubheader', 'apostrophe-rich-text') }}
-    </p>
   </div>
 
-  <div class="bg-white mt5 tl br3 shadow-2 w-90 w-80-ns pv3 ph4 ph5-ns center lh-copy">
+  <section class="bg-white mt5 tl br3 shadow-2 w-90 w-80-ns pv3 ph4 ph5-ns center lh-copy">
     <h3 class="f3">
       {{ apos.singleton(data.page, 'aboutTextHeader', 'apostrophe-rich-text') }}
     </h3>
@@ -53,6 +51,12 @@
     <h3 class="f3 quodl-blue tc">
       {{ apos.singleton(data.page, 'aboutButtonHeader', 'apostrophe-rich-text') }}
     </h3>
-  </div>
+
+    <div class="tc pb4">
+      <a href="/pricing" class="white quodl-bg-blue no-underline f5 br-pill pv2 ph3">
+        Create FREE account
+      </a>
+    </div>
+  </section>
 </section>
 {% endblock %}
