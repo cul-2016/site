@@ -41,27 +41,97 @@
       </a>
     </div>
   </section>
+
+  <section class="mw8 center relative ph3">
+    <h2 class="tc fw1 f2 pv5">
+      {{ apos.singleton(data.page, 'pageTitle3', 'apostrophe-rich-text', {}) }}
     </h2>
-    <h3 class="tc pb3">
-      {{ apos.singleton(data.page, 'sectionSubheader', 'apostrophe-rich-text') }}
-    </h3>
-    <div class="w-40 ph3 dib">
-      <p>
-        {{ apos.area(data.page, 'body', {
-          widgets: {
-            'apostrophe-rich-text': {
-              toolbar: [ 'Bold', 'Italic' ]
-            }
-          }
-        }) }}
-      </p>
-    </div>
-    <div class="w-50 dib v-top">
-      <div class="br-pill w-40 bg-light-red ba center tc mt3">
-        <a href="/about" class="no-underline">
-          {{ apos.singleton(data.page, 'sectionButton', 'apostrophe-rich-text') }}
-        </a>
+    <img src="/images/splitter.svg" class="absolute left-0 right-0 center top-5 dn db-l" />
+
+    <div class="w-100 cb mb5-5">
+      <div class="fl mw5-5 h6 how-section">
+        <h3 class="quodl-blue f3 mb0 tl">
+          {{ apos.singleton(data.page, 'timelineTitle1', 'apostrophe-rich-text', {}) }}
+        </h3>
+        <p class="lh-copy tl">
+          {{ apos.singleton(data.page, 'timelineText1', 'apostrophe-rich-text', {}) }}
+        </p>
       </div>
+      <div class="mw5-25 fr pt2 how-section">
+        {{ apos.singleton(data.page, 'timelineImage1', 'apostrophe-images', {
+          limit: 1,
+          size: 'full'
+        }) }}
+      </div>
+      <div class="cb"></div>
     </div>
+
+
+    <div class="w-100 cb mb5-5">
+      <div class="fr mw5-5 h6 how-section">
+        <h3 class="quodl-blue f3 mb0">
+          {{ apos.singleton(data.page, 'timelineTitle2', 'apostrophe-rich-text', {}) }}
+        </h3>
+        <p class="lh-copy">
+          {{ apos.singleton(data.page, 'timelineText2', 'apostrophe-rich-text', {}) }}
+        </p>
+      </div>
+      <div class="mw5-25 fl how-section">
+        {{ apos.singleton(data.page, 'timelineImage2', 'apostrophe-images', {
+          limit: 1,
+          size: 'full'
+        }) }}
+      </div>
+      <div class="cb"></div>
+    </div>
+
+    <div class="w-100 cb mb5-5">
+      <div class="fl mw5-5 h6 how-section">
+        <h3 class="quodl-blue f3 mb0">
+          {{ apos.singleton(data.page, 'timelineTitle3', 'apostrophe-rich-text', {}) }}
+        </h3>
+        <p class="lh-copy">
+          {{ apos.singleton(data.page, 'timelineText3', 'apostrophe-rich-text', {}) }}
+        </p>
+      </div>
+      <div class="mw5-25 fr how-section">
+        {{ apos.singleton(data.page, 'timelineImage3', 'apostrophe-images', {
+          limit: 1,
+          size: 'full'
+        }) }}
+      </div>
+      <div class="cb"></div>
+    </div>
+
+    <div class="w-100 cb mb5-5">
+      <div class="fr mw5-5 h6 how-section">
+        <h3 class="quodl-blue f3 mb0">
+          {{ apos.singleton(data.page, 'timelineTitle4', 'apostrophe-rich-text', {}) }}
+        </h3>
+        <p class="lh-copy">
+          {{ apos.singleton(data.page, 'timelineText4', 'apostrophe-rich-text', {}) }}
+        </p>
+      </div>
+      <div class="mw5-25 fl how-section">
+        {{ apos.singleton(data.page, 'timelineImage4', 'apostrophe-images', {
+          limit: 1,
+          size: 'full'
+        }) }}
+      </div>
+      <div class="cb"></div>
+    </div>
+
   </section>
+
+<section class="cb quodl-bg-light-gray">
+  <h2 class="tc fw1 f2 pt6 quodl-blue">
+    {{ apos.singleton(data.page, 'blogSectionTitle', 'apostrophe-rich-text', {}) }}
+  </h2>
+  <h3 class="tc fw1 f4 pv2">
+    {{ apos.singleton(data.page, 'blogSectionSubtitle', 'apostrophe-rich-text', {}) }}
+  </h3>
+
+  {{ apos.singleton(data.page, 'blogWidget', 'apostrophe-blog' ) }}
+
+</section>
 {% endblock %}
