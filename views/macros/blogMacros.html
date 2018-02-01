@@ -32,10 +32,11 @@
       <div class="">
         {{ apos.singleton(piece, 'slideshow', 'apostrophe-images', { limit: 1, aspectRatio: [324, 162], noHeight: true, edit: false, size: 'one-third' }) }}
         <span class="">{{ piece.publishedAt | date('MMM Do, YYYY') }}</span>
-        <a href="{{ piece._url }}" class="no-underline"><h6 class="orange f4">{{ piece.title }}</h6></a>
+        <a href="{{ piece._url }}" class="no-underline"><h6 class="orange f4">{{ piece.title }}</h6>
         {% if piece.authorId %}
-          <span class="">by {{ piece._author.title }}</span>
+          <span class="">{{ piece._author.title }}</span>
         {% endif %}
+        </a>
       </div>
     </div>
   </div>
