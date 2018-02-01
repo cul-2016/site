@@ -7,11 +7,11 @@
 {%- endblock -%}
 
 {% block main %}
-  <section class="tc center bg-silver pv5">
-    <h3 class="f2 quodl-blue">{{ data.piece.title }}</h3>
-    <div class="b">{{ data.piece.publishedAt | date('MMM Do, YYYY') }}</div>
+  <section class="tc center bg-filler pv5">
+    <h3 class="ph2 f2 f1-ns quodl-blue mb2">{{ data.piece.title }}</h3>
+    <div class="b o-50">{{ data.piece.publishedAt | date('MMMM Do, YYYY') }}</div>
 
-    <section class="lh-copy bg-white mt5 tl br3 shadow-2 w-90 w-80-ns pv3 ph4 ph5-ns center ">
+    <section class="lh-copy bg-white mt5 tl br3 shadow-2 w-90 w-80-ns pv2 pv3-ns ph3 ph5-ns center ">
       {{ apos.area(data.piece, 'main', {
         widgets: {
           'apostrophe-rich-text': {
@@ -31,38 +31,39 @@
         }
       }) }}
 
-      <section class="bt bb tc center">
-        <h5>SHARE THIS POST</h5>
+      <section class="bt bw1 quodl-b--gray pt4 tc center">
+        <h4 class="b o-50 mt0">
+          SHARE THIS POST
+        </h4>
 
-        <a class="ph2" href="https://www.facebook.com/sharer/sharer.php?u=https://quodl-site.herokuapp.com{{data.page.slug + '/' + data.piece.slug}}" target="_blank">
-          Facebook
+        <a class="ph2 no-underline" href="https://www.facebook.com/sharer/sharer.php?u=https://quodl-site.herokuapp.com{{data.page.slug + '/' + data.piece.slug}}" target="_blank">
+          <img src="../../images/fb.svg" alt="Facebook Logo">
         </a>
 
-        <a class="ph2" href="https://www.linkedin.com/cws/share?url=https://quodl-site.herokuapp.com{{data.page.slug + '/' + data.piece.slug}}" target="_blank">
-          Linkedin
+        <a class="ph2 no-underline" href="https://www.linkedin.com/cws/share?url=https://quodl-site.herokuapp.com{{data.page.slug + '/' + data.piece.slug}}" target="_blank">
+          <img src="../../images/linkedin.svg" alt="LinkedIn">
         </a>
 
-        <a class="ph2" href="http://twitter.com/share?text={{ data.piece.title }}&url=https://quodl-site.herokuapp.com{{data.page.slug + '/' + data.piece.slug}}&hashtags=quodl" target="_blank">
-          Twitter
+        <a class="ph2 no-underline" href="http://twitter.com/share?text={{ data.piece.title }}&url=https://quodl-site.herokuapp.com{{data.page.slug + '/' + data.piece.slug}}&hashtags=quodl" target="_blank">
+          <img src="../../images/twitter.svg" alt="Twitter">
         </a>
 
         {% if data.piece._author %}
-        <h5 class="tl fw1 bb">Author</h5>
-        <div class="w-20 dib v-top pr3">
-          {% if data.piece._author.thumbnail.items.length %}
-          {{ apos.singleton(data.piece._author, 'thumbnail', 'apostrophe-images', {edit: false}) }}
-          {% endif %}
+        <div class="bt bw1 quodl-b--gray mt4 pv4 tc tl-ns">
+          <h4 class="tl-ns normal">About the author</h4>
+          <div class="w-70 w-10-ns dib v-top pr3-ns br-100 author-photo">
+            {% if data.piece._author.thumbnail.items.length %}
+            {{ apos.singleton(data.piece._author, 'thumbnail', 'apostrophe-images', {edit: false}) }}
+            {% endif %}
+          </div>
+          <div class="dib w-100 w-80-ns">
+            <h5 class="b f5 tc tl-ns mv1">{{ data.piece._author.title }}</h5>
+            {% endif %}
+            {% if data.piece._author.bio %}
+            <p class="tc tl-ns"> {{ data.piece._author.bio }} </p>
+            {% endif %}
+          </div>
         </div>
-        <div class="dib w-70">
-          <h5 class="b f5 tl mt1">{{ data.piece._author.title }}</h5>
-          {% endif %}
-          {% if data.piece._author.bio %}
-          <p class="tl"> {{ data.piece._author.bio }} </p>
-          {% endif %}
-        </div>
-
-        <h5 class="f5 tl">You might also be interested in...</h5>
-        {{ apos.singleton(data.page, 'blogWidget', 'apostrophe-blog' ) }}
       </section>
     </section>
   </section>

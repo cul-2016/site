@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>linkedin</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M21.1666667,2 L2.83333333,2 C2.33333333,2 2,2.33333333 2,2.83333333 L2,21.1666667 C2,21.6666667 2.33333333,22 2.83333333,22 L21.1666667,22 C21.6666667,22 22,21.6666667 22,21.1666667 L22,2.83333333 C22,2.33333333 21.6666667,2 21.1666667,2 Z M7.91666667,19.0833333 L5,19.0833333 L5,9.5 L8,9.5 L8,19.0833333 L7.91666667,19.0833333 Z M6.41666667,8.16666667 C5.5,8.16666667 4.66666667,7.41666667 4.66666667,6.41666667 C4.66666667,5.5 5.41666667,4.66666667 6.41666667,4.66666667 C7.33333333,4.66666667 8.16666667,5.41666667 8.16666667,6.41666667 C8.16666667,7.41666667 7.41666667,8.16666667 6.41666667,8.16666667 Z M19.0833333,19.0833333 L16.0833333,19.0833333 L16.0833333,14.4166667 C16.0833333,13.3333333 16.0833333,11.9166667 14.5833333,11.9166667 C13,11.9166667 12.8333333,13.0833333 12.8333333,14.3333333 L12.8333333,19.0833333 L9.83333333,19.0833333 L9.83333333,9.5 L12.6666667,9.5 L12.6666667,10.8333333 L12.6666667,10.8333333 C13.0833333,10.0833333 14,9.33333333 15.5,9.33333333 C18.5,9.33333333 19.0833333,11.3333333 19.0833333,13.9166667 L19.0833333,19.0833333 Z" id="path-1"></path>
+    </defs>
+    <g id="social" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-83.000000, -30.000000)">
+        <g id="linkedin" transform="translate(83.000000, 30.000000)">
+            <circle id="Oval-4" fill="#2574A9" cx="17.5" cy="17.5" r="17.5"></circle>
+            <g id="Icon/App/LinkedIn" transform="translate(6.000000, 6.000000)">
+                <rect id="Bounding-Box" x="0" y="0" width="24" height="24"></rect>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#0077B5" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <g id="Mixin/Fill/White" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="evenodd">
+                    <rect id="Box" x="0" y="0" width="24" height="24"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
