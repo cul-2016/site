@@ -3,6 +3,10 @@ body {
   color: #011627;
 }
 
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
 .br-pill p {
   margin: 0;
   padding: 0;
@@ -99,7 +103,37 @@ h4 p {
   }
 }
 
+// Overwritten apostrophe classes
+
 .author-photo div {
   background-position: center !important;
   background-size: cover !important;
+}
+
+.apos-field {
+  max-width: none !important;
+  width: 80% !important;
+  margin: auto !important;
+}
+
+.apos-field-input {
+  background-color: transparent !important;
+  border: 1px solid #2574A9 !important;
+  font-family: 'Poppins', sans-serif !important;
+  padding: 0.5rem !important;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.apos-field-label {
+  margin: 0.25rem 0 !important;
+  font-size: 0.875rem !important;
+  font-weight: normal !important;
+  font-family: 'Poppins', sans-serif !important;
+  opacity: 0.5;
+  text-align: left;
+}
+
+.apos-field-label::after {
+  display: none;
 }
