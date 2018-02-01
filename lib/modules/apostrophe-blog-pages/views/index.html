@@ -8,40 +8,42 @@
 {% import 'apostrophe-pager:macros.html' as pager %}
 
 {% block main %}
-<section class="bg-blue white pv4">
-  <div class="w-80 center">
-    <h1 class="tc f2">
+<section class="bg-icons pv4">
+  <div class="w-90 w-80-ns center tc">
+    <h1 class="tc f2 quodl-blue">
       {{ apos.singleton(data.page, 'pageHeader', 'apostrophe-rich-text') }}
     </h1>
-    <h2 class="tc fw1">
+    <h2 class="tc fw1 pb4">
       {{ apos.singleton(data.page, 'pageSubheader', 'apostrophe-rich-text') }}
     </h2>
 
-    <div class="br-pill ba b--light-blue w4 tc pa1 mh2 dib">
-      <a class="white no-underline" href="/blog">All Articles</a>
+  <section class="bb bw1 quodl-b--gray w-70 center">
+    <div class="w4 pa1 mh2 dib">
+      <a class="b black no-underline" href="/blog">All Articles</a>
     </div>
-    <div class="br-pill ba b--light-blue w4 tc pa1 mh2 dib">
-      <a class="white no-underline" href="/blog/lecturers">For Lecturers</a>
+    <div class="w4 pa1 mh2 dib">
+      <a class="b black no-underline" href="/blog/lecturers">For Lecturers</a>
     </div>
-    <div class="br-pill ba b--light-blue w4 tc pa1 mh2 dib">
-      <a class="white no-underline" href="/blog/students">For Students</a>
+    <div class="w4 pa1 mh2 dib">
+      <a class="b black no-underline" href="/blog/students">For Students</a>
     </div>
+  </section>
 
-    <div class="w-90 black center mt4">
-      {# {% if data.page._edit %}
-        <div data-new-blog-post>
-          <div class="">
-            <a class="" href="#"><i class="icon-plus"></i> New Blog Post</a>
-          </div>
+  <section class="bg-white mt5 tl br3 shadow-2 w-90 pv3 ph3 ph5-ns center lh-copy">
+    {# {% if data.page._edit %}
+      <div data-new-blog-post>
+        <div class="">
+          <a class="" href="#"><i class="icon-plus"></i> New Blog Post</a>
         </div>
-      {% endif %} #}
-      <div class="">
-        {{ blog.renderBlogListings(data.pieces) }}
-      <div class="tc">
-        {{ pager.render({ page: data.currentPage, total: data.totalPages }, '#') }}
       </div>
+    {% endif %} #}
+    <div class="">
+      {{ blog.renderBlogListings(data.pieces) }}
+    <div class="tc">
+      {{ pager.render({ page: data.currentPage, total: data.totalPages }, '#') }}
     </div>
-  </div>
+    </div>
+  </section>
 </section>
 
 {% endblock %}

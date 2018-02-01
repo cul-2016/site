@@ -9,7 +9,7 @@
 {% block main %}
   <section class="tc center bg-icons pv5">
     <h3 class="ph2 f2 f1-ns quodl-blue mb2">{{ data.piece.title }}</h3>
-    <div class="b o-50">{{ data.piece.publishedAt | date('MMMM Do, YYYY') }}</div>
+    <div class="b o-50">{{ data.piece.publishedAt | date('MMMM D, YYYY') }}</div>
 
     <section class="lh-copy bg-white mt5 tl br3 shadow-2 w-90 w-80-ns pv2 pv3-ns ph3 ph5-ns center ">
       {{ apos.area(data.piece, 'main', {
