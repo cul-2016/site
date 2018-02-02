@@ -43,7 +43,7 @@
   </section>
 
   <section class="mw8 center relative ph3">
-    <h2 class="tc fw1 f2 pv5">
+    <h2 class="tc fw1 f2 pv5-ns">
       {{ apos.singleton(data.page, 'pageTitle3', 'apostrophe-rich-text', {}) }}
     </h2>
     <img src="/images/splitter.svg" class="absolute left-0 right-0 center top-5 dn db-l" />
@@ -124,14 +124,16 @@
   </section>
 
 <section class="cb quodl-bg-light-gray">
-  <h2 class="tc fw1 f2 pt6 quodl-blue">
+  <h2 class="tc fw1 f2 pt5 quodl-blue w-90 w-100-ns center tc">
     {{ apos.singleton(data.page, 'blogSectionTitle', 'apostrophe-rich-text', {}) }}
   </h2>
-  <h3 class="tc fw1 f4 pv2">
+  <h3 class="tc fw1 f4 pb2">
     {{ apos.singleton(data.page, 'blogSectionSubtitle', 'apostrophe-rich-text', {}) }}
   </h3>
 
-  {{ apos.singleton(data.page, 'blogWidget', 'apostrophe-blog' ) }}
+  <div class="center tc pb5">
+    {{ apos.singleton(data.page, 'blogWidget', 'apostrophe-blog' ) }}
+  </div>
 
 </section>
 {% endblock %}
