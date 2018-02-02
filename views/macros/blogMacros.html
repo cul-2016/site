@@ -1,6 +1,6 @@
 {%- macro renderBlogListings(pieces, options) -%}
   {%- if pieces -%}
-    <ul class="list">
+    <ul class="list pl0">
       {%- for piece in pieces -%}
         {{ renderBlogListing(piece) }}
       {%- endfor -%}
@@ -12,18 +12,16 @@
 
 {%- macro renderBlogListing(piece) -%}
 {% set image = apos.images.first(piece) or null %}
-  <li class="dib w-40 ma2 pa2 bg-white">
-    <span>{{ piece.publishedAt | date('MMM DD, YYYY' ) }}</span>
-    <h5><a href="{{ piece._url }}" class="black">{{ piece.title | e }}</a></h5>
-    {% if piece.authorId %}
-      <h6>by {{ piece._author.title }}</h6>
-    {% endif %}
-    <p>{{ apos.quodl.areaToPlainText(piece, 'main') | truncate(200) }}</p>
-
-    {# <div>{{ apos.singleton(piece, 'main', 'apostrophe-rich-text', { edit: false, truncate: 50 } ) }}</div> #}
-
-    <a href="{{ piece._url }}" class="black no-underline">Read More</a>
-  </li>
+  <a href="{{ piece._url }}" class="no-underline">
+    <li class="dib w-49-ns bg-white v-top ph2-ns pb4">
+      <span class="black no-underline o-50 b pb0">{{ piece.publishedAt | date('MMMM DD, YYYY' ) }}</span>
+      <h4 class="mv1"><a href="{{ piece._url }}" class="black no-underline f3">{{ piece.title | e }}</a></h4>
+      <p class="mv0">{{ apos.quodl.areaToPlainText(piece, 'main') | truncate(100) }}</p>
+      {% if piece.authorId %}
+      <h5>{{ piece._author.title }}</h5>
+      {% endif %}
+    </li>
+  </a>
 {%- endmacro -%}
 
 {%- macro blogCard(piece) -%}
