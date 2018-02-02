@@ -26,8 +26,13 @@
           <img src="../images/logo_na_dark.svg" alt="Quodl logo" class="w3-5">
         </a>
       </div>
-      <a href="{{ data.home._url }}" class="no-underline pt3 pl3 fw6 fl black">Quodl</a>
-      <ul class="list dib fr">
+      <a href="{{ data.home._url }}" class="no-underline pt3 pl3 fw6 fl black dn dib-ns">Quodl</a>
+
+      <input type="checkbox" id="burger" class="absolute top-2 right-1 dn">
+      <label for="burger" class="dn-l pointer absolute top-1 right-1">
+        <img src="../images/logo_na_dark.svg" alt="burger menu" class="w2 dn-ns">
+      </label>
+      <ul class="list dn dib-ns fr menu">
         {% for nav_item in data.home._children %}
           <li class="dib pl4 fw6">
             <a href="{{ nav_item._url }}" class="no-underline black">
@@ -35,6 +40,11 @@
             </a>
           </li>
         {% endfor %}
+        <a href="https://www.quodl.co.uk" class="no-underline white">
+          <li class="dib ml4 fw6 ph3 pv2 br-pill bg-bright-orange">
+              Log in
+          </li>
+        </a>
       </ul>
     </nav>
   </div>
