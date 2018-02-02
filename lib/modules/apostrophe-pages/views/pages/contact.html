@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+  <section class="pv4 pv5-ns bg-icons">
+    <h1 class="quodl-blue tc center f1 pv5">
+      {{ apos.singleton(data.page, 'contactHeader', 'apostrophe-rich-text') }}
+    </h1>
+
+    <div class="bg-white br3 w-90 w-80-ns pt2 pa3-ns shadow-2 center tl ph5-ns">
+      <h4 class="tc f4 f3-ns fw1"><a name="contact"></a>
+        {{ apos.singleton(data.page, 'contactSubheader', 'apostrophe-rich-text') }}
+      </h4>
+        {{ apos.singleton(data.page, 'contactForm', 'messages-submit') }}
+    </div>
+  </section>
+
+{% endblock %}

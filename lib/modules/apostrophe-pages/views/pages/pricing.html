@@ -10,7 +10,7 @@
     </h3>
   </section>
 
-  <section class="quodl-bg-blue pv5 tc">
+  <section class="quodl-bg-blue pv4 pv5-ns tc">
     <div class="bg-white br3 w-80 w-25-ns pa3 pb4 shadow-2 center">
       <div class="f3 mt0">
         {{ apos.singleton(data.page, 'priceBoxHeader', 'apostrophe-rich-text') }}
@@ -34,15 +34,13 @@
       </p>
     </div>
   </section>
-  <section class="pv5 quodl-bg-light-gray">
-    <div class="bg-white br3 w-80 pa3 shadow-2 center tl ph5">
+  <section class="pv4 pv5-ns quodl-bg-light-gray">
+    <div class="bg-white br3 w-90 w-80-ns pt2 pa3-ns shadow-2 center tl ph5-ns">
       <h4 class="tc f4 f3-ns fw1"><a name="contact"></a>
         {{ apos.singleton(data.page, 'contactHeader', 'apostrophe-rich-text') }}
       </h4>
+        {{ apos.singleton(data.page, 'contactForm', 'messages-submit') }}
     </div>
   </section>
 
-  <div class="bg-silver center tc pt4 mt5 w-50">
-    {{ apos.singleton(data.page, 'contactForm', 'messages-submit') }}
-  </div>
 {% endblock %}

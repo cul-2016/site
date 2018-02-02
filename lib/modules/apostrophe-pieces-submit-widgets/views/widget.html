@@ -1,11 +1,10 @@
 {% import "apostrophe-schemas:macros.html" as schemas %}
 
-<form class="apos-submit-pieces-form apos-ui" data-apos-pieces-submit-form>
-  <h4>{{ data.label }}</h4>
+<form class="apos-submit-pieces-form apos-ui tc center" data-apos-pieces-submit-form>
   {{ schemas.fields(data.schema, { tabs: false }) }}
-  <button>Send</button>
+  <button class="white quodl-bg-blue ba-quodl-blue f5 br-pill pv2 ph4 mv3 poppins">Send</button>
   {# Later gets hoisted out and becomes visible #}
-  <div class="apos-pieces-submit-thank-you" data-apos-pieces-submit-thank-you>
+  <div class="apos-pieces-submit-thank-you tc" data-apos-pieces-submit-thank-you>
     <h4>Thank you for your submission! We will review it soon.</h4>
   </div>
 </form>
