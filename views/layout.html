@@ -13,28 +13,49 @@
 {% endblock %}
 
 {% block extraHead %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113135812-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-113135812-2');
+  </script>
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
 {% endblock %}
 
 {% block beforeMain %}
   {#  Headers or Navigation  #}
-  <div class="absolute w-100">
-    <nav class="w-site center w-80">
-      <div class="center tc pt3">
+  <div class="absolute w-100 bg-white bg-transparent-ns z-1">
+    <nav class="w-site center w-80-ns">
+      <div class="center tc pt3 pl3">
         <a href="{{ data.home._url }}" class="fl">
           <img src="../images/logo_na_dark.svg" alt="Quodl logo" class="w3-5">
         </a>
       </div>
-      <a href="{{ data.home._url }}" class="no-underline pt3 pl3 fw6 fl black">Quodl</a>
-      <ul class="list dib fr">
+      <a href="{{ data.home._url }}" class="no-underline pt3 pl3 fw6 fl black dn dib-ns">Quodl</a>
+
+      <input type="checkbox" id="burger" class="absolute top-2 right-1 dn">
+      <label for="burger" class="dn-l pointer absolute top-1 right-1">
+        <img src="../images/menu.svg" alt="burger menu" class="w2 dn-ns">
+      </label>
+      <ul class="tr list w-100 w-75-ns dn dib-ns fr menu quodl-bg-blue-s mt2 pt2 mb0 pt0-ns ph0 shadow-2-s">
         {% for nav_item in data.home._children %}
-          <li class="dib pl4 fw6">
-            <a href="{{ nav_item._url }}" class="no-underline black">
+          <li class="db dib-ns tc center pl4-ns fw6 pv3 pv0-ns">
+            <a href="{{ nav_item._url }}" class="no-underline white quodl-black-ns">
               {{ nav_item.title }}
             </a>
           </li>
         {% endfor %}
+        <div class="center tc pv3 pv0-ns dib-ns">
+          <a href="https://www.quodl.co.uk" class="no-underline white">
+            <li class="dib ml4-ns fw6 ph3 pv2 br-pill bg-bright-orange">
+              Log in
+            </li>
+          </a>
+        </div>
       </ul>
     </nav>
   </div>
