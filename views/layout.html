@@ -32,11 +32,14 @@
     <nav class="w-site center w-80-ns tr">
       <div class="center tc pt3 pl3">
         <a href="{{ data.home._url }}" class="fl">
-          <img src="../images/logo_na_dark.svg" alt="Quodl logo" class="w3-5">
+          {% if data.piece.tags == "" %}
+            <img src="../images/logo_na_dark.svg" alt="Quodl logo" class="w3-5">
+          {% else %}
+            <img src="../../images/logo_na_dark.svg" alt="Quodl logo" class="w3-5">
+          {% endif %}
         </a>
       </div>
       <a href="{{ data.home._url }}" class="no-underline pt3 pl3 fw6 fl black dn dib-ns">Quodl</a>
-
       <div class="dib dn-ns pr5">
         <a href="https://www.quodl.co.uk" class="no-underline white">
           <li class="dib ml4-ns fw6 ph3 pv2 br-pill bg-bright-orange">
