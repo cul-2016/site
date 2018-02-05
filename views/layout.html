@@ -29,7 +29,7 @@
 {% block beforeMain %}
   {#  Headers or Navigation  #}
   <div class="absolute w-100 bg-white bg-transparent-ns z-1">
-    <nav class="w-site center w-80-ns">
+    <nav class="w-site center w-80-ns tr">
       <div class="center tc pt3 pl3">
         <a href="{{ data.home._url }}" class="fl">
           <img src="../images/logo_na_dark.svg" alt="Quodl logo" class="w3-5">
@@ -37,6 +37,13 @@
       </div>
       <a href="{{ data.home._url }}" class="no-underline pt3 pl3 fw6 fl black dn dib-ns">Quodl</a>
 
+      <div class="dib dn-ns pr5">
+        <a href="https://www.quodl.co.uk" class="no-underline white">
+          <li class="dib ml4-ns fw6 ph3 pv2 br-pill bg-bright-orange">
+            Log in
+          </li>
+        </a>
+      </div>
       <input type="checkbox" id="burger" class="absolute top-2 right-1 dn">
       <label for="burger" class="dn-l pointer absolute top-1 right-1">
         <img src="../images/menu.svg" alt="burger menu" class="w2 dn-ns">
@@ -49,7 +56,7 @@
             </a>
           </li>
         {% endfor %}
-        <div class="center tc pv3 pv0-ns dib-ns">
+        <div class="center tc pv3 pv0-ns dn dib-ns">
           <a href="https://www.quodl.co.uk" class="no-underline white">
             <li class="dib ml4-ns fw6 ph3 pv2 br-pill bg-bright-orange">
               Log in
