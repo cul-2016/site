@@ -1,14 +1,13 @@
 {% extends 'apostrophe-templates:layout.html' %}
+
 {% import 'macros/blogMacros.html' as blog %}
-{% block bodyClass %} demo-blog-index-page{% endblock %}
-{% block headerMessage %}You are on the "Blog Index" template of the Apostrophe demo site.{% endblock %}
-{% block upperClass %}bg-gold{% endblock %}
+
 {% block title %}Quodl | {{ data.page.title | e }}{% endblock %}
 
 {% import 'apostrophe-pager:macros.html' as pager %}
 
 {% block main %}
-<section class="bg-icons pv4">
+<section class="bg-icons pv5">
   <div class="w-90 w-80-ns center tc">
     <h1 class="tc f2 quodl-blue">
       {{ apos.singleton(data.page, 'pageHeader', 'apostrophe-rich-text') }}
