@@ -32,6 +32,8 @@
     <nav class="w-site center w-80-ns tr">
       <div class="center tc pt3 pl3">
         <a href="{{ data.home._url }}" class="fl">
+          <!-- See https://github.com/cul-2016/site/issues/34 for reason this
+        if statement was used -->
           {% if data.piece.tags == "" %}
             <img src="../images/logo_na_dark.svg" alt="Quodl logo" class="w3-5">
           {% else %}
