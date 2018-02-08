@@ -41,9 +41,9 @@ messages sent by the contact form, blog articles etc. Clicking on each category
 opens up information about that thing ie. users and gives you the ability to
 change them.
 
-Admins shouldn't need to change much using the page menu. It is powerful and
+**Admins shouldn't need to change much using the page menu**. **It is powerful and
 capable of deleting and creating new pages which you do not want to do
-accidentally. There are two main cases in which you may wish to use this menu:
+accidentally.** There are two main cases in which you may wish to use this menu:
 
 1. If you made a change to a page and want to see what the page looked like
 previously. To do this click on 'Page Versions':
@@ -67,7 +67,24 @@ so there must not be any spaces in it. The slug will be automatically generated
 using your blog title and so you don't need to change it if you don't wish. A
 long, descriptive slug is fine as it's good for SEO.
 
+For your blog to appear in the 'For Students' or 'For Lecturers' pages make sure
+you give it either the 'students' or 'lecturers' tag in the 'meta' tab when you
+create it. You can always change/ update this by clicking on 'Update Article' in
+the page menu on an article that's already been created. All blog articles will
+appear under 'All Articles' whether they have any tags or not. Articles can also
+have more than one tag if you see it relevant.
+
 You must change published to 'yes' if you want the post to be visible on the site.
+
+Once you've completed this section by clicking 'Save Article' you will be taken
+to your new blog article which will look something like this:
+
+![image](https://user-images.githubusercontent.com/16775804/35849212-bebbcdf0-0b18-11e8-9e8f-698e17988058.png)
+
+To add content click on the plus icon and choose whether to add text or an image.
+You can add more than one thing to your blog so once you've added one, look for
+the plus icon above or below what you just added and you can add something else.
+
 
 ### Editing content
 
@@ -83,7 +100,8 @@ You may also notice these symbols showing when you move around the site:
 
 <img src="https://user-images.githubusercontent.com/16775804/35849016-146471d6-0b18-11e8-91a1-f0a9b040c330.png" width=200px />
 
-They are also a sign that something is editable. Rather than deleting something
+They are also a sign that something is editable. Ignore the arrow icon, it is
+not in use at the moment and so won't do anything. Rather than deleting something
 by clicking the trash can icon, try double clicking the content to get the dotted
 box. If you do accidentally click the trash icon and you want to recreate what
 you deleted look where it used to be for something like this:
@@ -93,20 +111,3 @@ you deleted look where it used to be for something like this:
 Click on that and then enter in the text that was there before. You should not
 need to delete the field and add it again, normally just double click it to see
 the dotted box.
-
-### Writing a blog article
-
-When you create a blog article at first it will look something like this:
-
-![image](https://user-images.githubusercontent.com/16775804/35849212-bebbcdf0-0b18-11e8-9e8f-698e17988058.png)
-
-To add content click on the plus icon and choose whether to add text or an image.
-You can add more than one thing to your blog so once you've added one, look for
-the plus icon above or below what you just added and you can add something else.
-
-For your blog to appear in the 'For Students' or 'For Lecturers' pages make sure
-you give it either the 'students' or 'lecturers' tag in the options when you
-create it. You can always change/ update this by clicking on 'Update Article' in
-the page menu on an article that's already been created. All blog articles will
-appear under 'All Articles' whether they have any tags or not. Articles can also
-have more than one tag if you see it relevant.
