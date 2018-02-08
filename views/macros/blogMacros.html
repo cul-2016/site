@@ -25,12 +25,12 @@
 {%- endmacro -%}
 
 {%- macro blogCard(piece) -%}
-  <div class="dib w-90 w-25-ns mh3 tl v-top">
+  <div class="dib w-90 w5-ns tl v-top mr5-ns">
     {{ apos.singleton(piece, 'slideshow', 'apostrophe-images', { limit: 1, aspectRatio: [324, 162], noHeight: true, edit: false, size: 'one-third' }) }}
     <span class="o-50 b">{{ piece.publishedAt | date('MMMM D, YYYY') }}</span>
     <a href="{{ piece._url }}" class="no-underline">
       <h6 class="f4 quodl-black mv3 lh-copy">{{ piece.title }}</h6>
-      <p class="mv0 quodl-black">{{ apos.quodl.areaToPlainText(piece, 'main') | truncate(100) }}</p>
+      <p class="mv0 quodl-black word-break-all">{{ apos.quodl.areaToPlainText(piece, 'main') | truncate(100) }}</p>
 
       {% if piece.authorId %}
         <span class="">{{ piece._author.title }}</span>
