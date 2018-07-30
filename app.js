@@ -38,6 +38,7 @@ var apos = require('apostrophe')({
         key: process.env.AWS_ID,
         bucket: process.env.AWS_BUCKET,
         region: 'eu-west-1',
+        https: true
       },
     },
   },
