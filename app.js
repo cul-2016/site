@@ -9,6 +9,9 @@ var apos = require('apostrophe')({
     'apostrophe-blog-pages': {},
     'apostrophe-blog-widgets': {},
     'apostrophe-images-widgets': {},
+    'apostrophe-express': {
+      middleware: [require('express-force-https')]
+    },
     'as-helpers': {},
     'link-widgets': {},
     'messages': {},
