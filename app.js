@@ -9,6 +9,9 @@ var apos = require('apostrophe')({
     'apostrophe-blog-pages': {},
     'apostrophe-blog-widgets': {},
     'apostrophe-images-widgets': {},
+    'apostrophe-express': {
+      middleware: [require('express-force-https')]
+    },
     'as-helpers': {},
     'link-widgets': {},
     'messages': {},
@@ -35,6 +38,7 @@ var apos = require('apostrophe')({
         key: process.env.AWS_ID,
         bucket: process.env.AWS_BUCKET,
         region: 'eu-west-1',
+        https: true
       },
     },
   },
